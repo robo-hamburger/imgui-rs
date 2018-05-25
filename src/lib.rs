@@ -232,6 +232,22 @@ impl ImGui {
             io.display_framebuffer_scale.y,
         )
     }
+    pub fn want_capture_mouse(&self) -> bool {
+        let io = self.io();
+        io.want_capture_mouse
+    }
+    pub fn want_capture_keyboard(&self) -> bool {
+        let io = self.io();
+        io.want_capture_keyboard
+    }
+    pub fn want_text_input(&self) -> bool {
+        let io = self.io();
+        io.want_text_input
+    }
+    pub fn want_move_mouse(&self) -> bool {
+        let io = self.io();
+        io.want_move_mouse
+    }
     pub fn mouse_pos(&self) -> (f32, f32) {
         let io = self.io();
         (io.mouse_pos.x, io.mouse_pos.y)
